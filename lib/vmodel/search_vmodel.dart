@@ -19,10 +19,7 @@ class SearchViewModel extends ChangeNotifier {
   Future<SearchProductModel> searchProduct(
       String lat, String long, String product) async {
     try {
-      // onProgress();
       final response = await _repository.searchItem(lat, long, product);
-      // var officials = jsonEncode(response);
-      debugPrint('response: $response');
       return response;
     } catch (e) {
       onDoneWithException();

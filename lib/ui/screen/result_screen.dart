@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:motohub/data/model/route_argument.dart';
 import 'package:motohub/data/model/search_model.dart';
+import 'package:motohub/util/string_util.dart';
 import 'package:provider/provider.dart';
 
 import '../../data/model/search_product_model.dart';
@@ -113,6 +114,7 @@ class _ResultScreenState extends State<ResultScreen> {
                     children: [
                       Text(data.productName.toString(),
                           style: const TextStyle(fontWeight: FontWeight.bold)),
+                      Text(data.motorcyleType.toString()),
                       Text(data.storeName.toString(),
                           style: const TextStyle(
                               fontWeight: FontWeight.bold,
@@ -155,6 +157,12 @@ class _ResultScreenState extends State<ResultScreen> {
                               fontSize: 30, fontWeight: FontWeight.bold)))
                 ]),
                 onTap: () {
+                  Navigator.of(context).pushNamed(mapScreen,
+                      arguments: SearchModel(
+                          latitude: data.lat,
+                          longitude: data.long,
+                          item: data.storeName));
+
                   debugPrint(data.storeLocation.toString());
                 })));
   }

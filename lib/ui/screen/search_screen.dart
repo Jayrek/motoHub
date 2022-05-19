@@ -21,17 +21,8 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     locationModel = Provider.of<LocationModel>(context);
-    debugPrint(locationModel.latitude.toString());
-    debugPrint(locationModel.longitude.toString());
-    debugPrint('address: ${locationModel.addressName.toString()}');
     return Scaffold(
         backgroundColor: Colors.white,
-        // appBar: AppBar(
-        //     iconTheme: const IconThemeData(color: Colors.black),
-        //     elevation: 0,
-        //     backgroundColor: Colors.white,
-        //     title: const Text('Search Product',
-        //         style: TextStyle(fontSize: 18, color: Colors.black87))),
         body: Column(mainAxisSize: MainAxisSize.min, children: [
           Column(children: [
             const SizedBox(height: 40),

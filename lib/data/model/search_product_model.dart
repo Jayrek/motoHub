@@ -43,6 +43,8 @@ class Datum {
     this.storeName,
     this.storeLocation,
     this.motorcyleType,
+    this.lat,
+    this.long,
     this.distance,
   });
 
@@ -51,6 +53,8 @@ class Datum {
   String? storeName;
   String? storeLocation;
   String? motorcyleType;
+  String? lat;
+  String? long;
   double? distance;
 
   factory Datum.fromJson(Map<String, dynamic> json) => Datum(
@@ -59,6 +63,8 @@ class Datum {
         storeName: json["store_name"],
         storeLocation: json["store_location"],
         motorcyleType: json["motorcyle_type"],
+        lat: json["lat"],
+        long: json["long"],
         distance: json["distance"].toDouble(),
       );
 
@@ -68,11 +74,13 @@ class Datum {
         "store_name": storeName,
         "store_location": storeLocation,
         "motorcyle_type": motorcyleType,
+        "lat": lat,
+        "long": long,
         "distance": distance,
       };
 
   @override
   String toString() {
-    return 'Datum {productName: $productName, productPrice: $productPrice, storeName: $storeName, storeLocation: $storeLocation, motorcyleType: $motorcyleType, distance: $distance}';
+    return 'Datum {productName: $productName, productPrice: $productPrice, storeName: $storeName, storeLocation: $storeLocation, motorcyleType: $motorcyleType, lat: $lat, long: $long, distance: $distance}';
   }
 }

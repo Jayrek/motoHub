@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:motohub/ui/screen/main_screen.dart';
+import 'package:motohub/ui/screen/map_screen.dart';
 import 'package:motohub/ui/screen/result_screen.dart';
 import 'package:motohub/ui/screen/search_screen.dart';
 import 'package:motohub/ui/screen/splash_screen.dart';
@@ -13,8 +13,6 @@ class RouteGenerator {
     switch (settings.name) {
       case splash:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
-      case mainScreen:
-        return MaterialPageRoute(builder: (_) => const MainScreen());
       case searchScreen:
         return MaterialPageRoute(
             builder: (_) =>
@@ -23,6 +21,10 @@ class RouteGenerator {
         return MaterialPageRoute(
             builder: (_) =>
                 ResultScreen(routeArgument: RouteArgument(param: args)));
+      case mapScreen:
+        return MaterialPageRoute(
+            builder: (_) =>
+                MapScreen(routeArgument: RouteArgument(param: args)));
       default:
         return MaterialPageRoute(
             builder: (_) =>
