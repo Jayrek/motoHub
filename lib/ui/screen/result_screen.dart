@@ -157,12 +157,7 @@ class _ResultScreenState extends State<ResultScreen> {
                               fontSize: 30, fontWeight: FontWeight.bold)))
                 ]),
                 onTap: () {
-                  Navigator.of(context).pushNamed(mapScreen,
-                      arguments: SearchModel(
-                          latitude: data.lat,
-                          longitude: data.long,
-                          item: data.storeName));
-
+                  Navigator.of(context).pushNamed(mapScreen, arguments: data);
                   debugPrint(data.storeLocation.toString());
                 })));
   }
