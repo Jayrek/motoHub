@@ -40,6 +40,7 @@ class Datum {
   Datum({
     this.productName,
     this.productPrice,
+    this.productStock,
     this.storeName,
     this.storeLocation,
     this.motorcyleType,
@@ -50,6 +51,7 @@ class Datum {
 
   String? productName;
   int? productPrice;
+  int? productStock;
   String? storeName;
   String? storeLocation;
   String? motorcyleType;
@@ -60,6 +62,7 @@ class Datum {
   factory Datum.fromJson(Map<String, dynamic> json) => Datum(
         productName: json["product_name"],
         productPrice: json["product_price"],
+        productStock: json["product_stock"],
         storeName: json["store_name"],
         storeLocation: json["store_location"],
         motorcyleType: json["motorcyle_type"],
@@ -71,6 +74,7 @@ class Datum {
   Map<String, dynamic> toJson() => {
         "product_name": productName,
         "product_price": productPrice,
+        "product_stock": productStock,
         "store_name": storeName,
         "store_location": storeLocation,
         "motorcyle_type": motorcyleType,
@@ -81,6 +85,6 @@ class Datum {
 
   @override
   String toString() {
-    return 'Datum {productName: $productName, productPrice: $productPrice, storeName: $storeName, storeLocation: $storeLocation, motorcyleType: $motorcyleType, lat: $lat, long: $long, distance: $distance}';
+    return 'Datum {productName: $productName, productPrice: $productPrice, productStock: $productStock, storeName: $storeName, storeLocation: $storeLocation, motorcyleType: $motorcyleType, lat: $lat, long: $long, distance: $distance}';
   }
 }

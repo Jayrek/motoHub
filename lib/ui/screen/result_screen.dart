@@ -118,7 +118,9 @@ class _ResultScreenState extends State<ResultScreen> {
                       Text(data.storeName.toString(),
                           style: const TextStyle(
                               fontWeight: FontWeight.bold,
-                              color: Colors.black45))
+                              color: Colors.black45)),
+                      Text('Stock: ${data.productStock.toString()}',
+                          style: const TextStyle(fontSize: 13))
                     ]),
                 subtitle: ListTile(
                     horizontalTitleGap: 5,
