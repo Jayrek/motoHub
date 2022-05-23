@@ -1,0 +1,4 @@
+#Sun May 22 13:29:43 PST 2022
+base.0=/Users/fst.user/fs_jayrek/android/motohub/motohub/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

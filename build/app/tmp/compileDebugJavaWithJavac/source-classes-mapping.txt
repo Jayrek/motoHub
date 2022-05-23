@@ -1,0 +1,4 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/example/motohub/motohub/BuildConfig.java
+ com.example.motohub.motohub.BuildConfig

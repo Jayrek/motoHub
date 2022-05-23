@@ -51,7 +51,7 @@ class Datum {
 
   String? productName;
   int? productPrice;
-  int? productStock;
+  dynamic productStock;
   String? storeName;
   String? storeLocation;
   String? motorcyleType;
